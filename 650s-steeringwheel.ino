@@ -6,8 +6,6 @@
 #define NUMBUTTONS 16
 #define NUMROWS 5
 #define NUMCOLS 4
-// #define joyX A0
-// #define joyY A1
 
 
 byte buttons[NUMROWS][NUMCOLS] = {
@@ -93,12 +91,9 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,
   false, false, false, false, false, false,
   false, false, false, false, false);
 
-// int analogOff;
-
 void setup() {
   Joystick.begin();
   rotary_init();
-  // analogOff = 0;
 }
 
 void loop() { 
@@ -107,46 +102,7 @@ void loop() {
 
   CheckAllButtons();
 
-  // CheckJoystick();
-
 }
-
-// void CheckJoystick(){
-//   if (analogOff == 1)
-//   {
-//     if (analogRead(joyX) < 480)
-//     {
-//       Joystick.setButton(24,1);
-//     }
-//     else if (analogRead(joyX) > 510)
-//     {
-//       Joystick.setButton(25,1);
-//     }
-//     else
-//     {
-//       Joystick.setButton(24,0);
-//       Joystick.setButton(25,0);
-//     }
-//     if (analogRead(joyY) < 480)
-//     {
-//       Joystick.setButton(26,1);
-//     }
-//     else if (analogRead(joyY) > 510)
-//     {
-//       Joystick.setButton(27,1);
-//     }
-//     else
-//     {
-//       Joystick.setButton(26,0);
-//       Joystick.setButton(27,0);
-//     }
-//   }
-//   else
-//   {
-//     Joystick.setRxAxis(analogRead(joyX));
-//     Joystick.setRyAxis(analogRead(joyY));
-//   }
-// }
 
 void CheckAllButtons(void) {
     if (buttbx.getKeys())
@@ -159,18 +115,10 @@ void CheckAllButtons(void) {
                     case PRESSED:
                     case HOLD:
                               Joystick.setButton(buttbx.key[i].kchar, 1);
-                              // if( (uint8_t) buttbx.key[i].kchar == 15)
-                              // {
-                              //   analogOff=1;
-                              // }
                               break;
                     case RELEASED:
                     case IDLE:
                               Joystick.setButton(buttbx.key[i].kchar, 0);
-                              // if( (uint8_t) buttbx.key[i].kchar == 15)
-                              // {
-                              //   analogOff=0;
-                              // }
                               break;
             }
            }   
