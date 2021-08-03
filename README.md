@@ -1,7 +1,7 @@
 # 650s-steeringwheel
 This project is based on https://www.thingiverse.com/thing:3025648  
 I used an Arduino Pro Micro  
-Check the photos <a href="/photos">here</a>
+Check the photos <a href="/photos/photos.md">here</a>
 
 ### Buttons
 <table><tr><td><img src="/images/button_schema.jpg" width=500></td><td><img src="/images/buttons.png" width=500></td></tr></table>
