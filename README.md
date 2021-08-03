@@ -1,6 +1,6 @@
 # 650s-steeringwheel
-![Button Wiring](/images/button_schema.jpg)
-![Button Schema](/images/buttons.png)
+### Buttons
+<table><tr><td><img src="/images/button_schema.jpg" width=500></td><td><img src="/images/buttons.png" width=500></td></tr></table>
 
 ### Button Grid
 | Pin | 16 | 8 | 9 | 14 |
